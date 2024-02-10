@@ -1,23 +1,21 @@
-import folium
+#!/usr/bin/env python3
 import numpy as np
 from sklearn.cluster import KMeans
+from mapboxgl.viz import CircleViz
+from IPython.display import HTML, display
 
-# Coordinates of {550 Peachtree St NE}
-center_latitude = 33.771114
-center_longitude = -84.386123
-
-# Given coordinates
-coordinates = [
-    {"latitude": 33.755671, "longitude": -84.388168},
-    {"latitude": 33.785294, "longitude": -84.372491},
-    # Add all coordinates here
-    {"latitude": 33.750917, "longitude": -84.381309}
+# Given addresses with escalation levels
+addresses = [
+    {"latitude": 33.755671, "longitude": -84.388168, "escalation": 2},
+    {"latitude": 33.785294, "longitude": -84.372491, "escalation": 3},
+    {"latitude": 33.767912, "longitude": -84.360572, "escalation": 2},
+    # Add all addresses with escalation levels here
 ]
 
-# Convert coordinates to numpy array
-X = np.array([[coord['latitude'], coord['longitude']] for coord in coordinates])
+# Convert addresses to numpy array
+X = np.array([[address['longitude'], address['latitude']] for address in addresses])
 
-# Number of clusters (adjust as needed)
+# Number of clusters
 n_clusters = 5
 
 # Perform KMeans clustering
@@ -27,12 +25,38 @@ kmeans.fit(X)
 # Get cluster centers
 cluster_centers = kmeans.cluster_centers_
 
-# Initialize map centered around {550 Peachtree St NE}
-mymap = folium.Map(location=[center_latitude, center_longitude], zoom_start=14)
-
-# Add cluster markers to the map
+# Create GeoJSON data
+features = []
 for center in cluster_centers:
-    folium.Marker(location=[center[0], center[1]], icon=folium.Icon(color='blue')).add_to(mymap)
+    features.append({
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [center[0], center[1]]
+        },
+        "properties": {
+            "marker-color": "#ff0000",
+            "marker-symbol": "marker"
+        }
+    })
 
-# Display the map
-mymap.save("cluster_map.html")
+geojson_data = {
+    "type": "FeatureCollection",
+    "features": features
+}
+
+# Create a Mapbox map
+viz = CircleViz(
+    geojson_data,
+    access_token='YOUR_MAPBOX_ACCESS_TOKEN',
+    color_property='marker-color',
+    color_stops=[
+        [0, '#00ff00'],  # green
+        [1, '#ff0000']   # red
+    ],
+    radius=10,
+    center=(addresses[0]['longitude'], addresses[0]['latitude']),
+    zoom=10
+)
+
+viz.show()
