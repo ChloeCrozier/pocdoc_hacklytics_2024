@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Medical Diagnostic Chatbot</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 h-screen flex items-center justify-center">
+    <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h1 class="text-2xl font-bold mb-4">Welcome to Your AI Health Assistant</h1>
+        <div id="chatbox" class="h-64 overflow-auto p-4 bg-gray-50 rounded">
+            <!-- Chat messages will go here -->
+        </div>
+        <div class="mt-4">
+            <input type="text" id="userInput" class="border p-2 w-full" placeholder="Type your age, address, symptoms...">
+            <button id="sendButton" class="mt-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">Send</button>
+        </div>
+    </div>
+    <script src="chat.js"></script>
+</body>
+</html>
