@@ -2,7 +2,7 @@
     "550 PEACHTREE STREET, NE": {
         "num_vans": 4,
         "van_ratio": 0.09,
-        "Hospital": [
+        "patients": [
             {
                 "latitude": 33.785294,
                 "longitude": -84.372491,
@@ -296,17 +296,17 @@
     "677 CHURCH STREET": {
         "num_vans": 4,
         "van_ratio": 0.07,
-        "Hospital": []
+        "patients": []
     },
     "705 DIXIE STREET": {
         "num_vans": 5,
         "van_ratio": 0.4,
-        "Hospital": []
+        "patients": []
     },
     "80 JESSE HILL, JR DRIVE SE": {
         "num_vans": 6,
         "van_ratio": 0.03,
-        "Hospital": [
+        "patients": [
             {
                 "latitude": 33.755671,
                 "longitude": -84.388168,
