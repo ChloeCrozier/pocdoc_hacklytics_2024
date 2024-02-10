@@ -1,12 +1,12 @@
 {
-    "550 PEACHTREE STREET, NE": {
-        "num_vans": 4,
-        "van_ratio": 0.09,
+    "550 Peachtree St NE Atlanta, GA 30308": {
+        "num_vans": 5,
+        "van_ratio": 0.60,
         "patients": [
             {
                 "latitude": 33.785294,
                 "longitude": -84.372491,
-                "escalation": 3,
+                "escalation": 1,
                 "first_name": "Michael",
                 "last_name": "Miller",
                 "timestamp": "2024-02-10T08:30:00"
@@ -14,7 +14,7 @@
             {
                 "latitude": 33.767912,
                 "longitude": -84.360572,
-                "escalation": 2,
+                "escalation": 4,
                 "first_name": "David",
                 "last_name": "Davis",
                 "timestamp": "2024-02-10T15:45:00"
@@ -293,19 +293,19 @@
             }
         ]
     },
-    "677 CHURCH STREET": {
-        "num_vans": 4,
-        "van_ratio": 0.07,
+    "677 Church St NW Atlanta, GA 30318": {
+        "num_vans": 0,
+        "van_ratio": 0,
         "patients": []
     },
-    "705 DIXIE STREET": {
-        "num_vans": 5,
-        "van_ratio": 0.4,
+    "705 Dixie Hills Cir NW Atlanta, GA 30314": {
+        "num_vans": 0,
+        "van_ratio": 0,
         "patients": []
     },
-    "80 JESSE HILL, JR DRIVE SE": {
-        "num_vans": 6,
-        "van_ratio": 0.03,
+    "80 Jesse Hill Jr Dr SE Atlanta, GA 30303": {
+        "num_vans": 3,
+        "van_ratio": 0.33,
         "patients": [
             {
                 "latitude": 33.755671,
