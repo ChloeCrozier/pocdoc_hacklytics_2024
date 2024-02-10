@@ -1,0 +1,101 @@
+First Name,Last Name,Address,Age,Gender,Symptoms,Previous Conditions,Stage
+Anna,Anderson,"821 Holly Street, Royston GA, 30662",17,F,"I woke up with a fever, so I took a tylenol, but I still have a 102 fever. I have general sweatiness and congestion. I also don't have an appetite.","High Blood Pressure, Diabetes",1
+Bill,Bennett,"1997 Pine Garden Lane, Atlanta GA, 30328",38,M,I feel very dizzy and lethargic,Schizopherenic,2
+Cathy,Caine,"2 Junior Avenue, Atlanta GA, 30303",47,F,I have minor chest pains and shortness of breath,Hemophilia,2
+Danny,Devito,"4054 College Street, Atlanta GA, 30303",60,M,I have a rash on my leg that is very itchy!,Skin Cancer,3
+Emily,Evans,"2552 Despard Street, Atlanta GA, 30303",31,F,I am pregnant and my legs are very swollen,Chronic diarrhea,3
+Frank,Fern,"661 Junior Avenue, Atlanta GA, 30303",25,M,I have a cough that has been persisting a week and a half after I've had the flu,Bronchitis,1
+Gary,Goober,"4041 Hanifan Lane, Atlanta GA, 30303",18,M,I sprained my ankle and it hurts to walk on it. I was running and I tripped over some curbing in my neighborhood.,None,1
+Hannah,Heinz,"2928 Kuhl Avenue, Atlanta GA, 30308",56,F,I am going through my third chemo treament and I have some neuropathy,Chrons Disease,1
+Darth,Brandon,"3495 Flint Street, Atlanta GA, 30303",80,M,I just had a panic attack and my heart rate won't go down. I feel like I am about to throw up.,"Dementia, Ice cream addiction",1
+Josh,Jennings,"1419 Pine Garden Lane, Atlanta GA, 30339",21,M,I'm feeling suicidal,"Anxiety, Depression",1
+Cameron,Jones,"5834 Piedmont St, Atlanta GA, 30319",69,M,Multiple rashes and severe itching,Chronic Diarrhea,3
+Jamie,Jones,"869 Spring St, Atlanta GA, 30344",41,M,Dizziness and nausea,Diabetes,2
+Morgan,Smith,"4655 Piedmont St, Atlanta GA, 30322",81,F,Mild fever,None,1
+Quinn,Williams,"1999 Juniper St, Atlanta GA, 30352",66,M,Unresponsive with multiple organ failure,Skin Cancer,4
+Morgan,Rodriguez,"5493 Spring St, Atlanta GA, 30325",68,M,Severe trauma with no vital signs,Diabetes,4
+Morgan,Johnson,"9655 Spring St, Atlanta GA, 30347",26,F,Unresponsive with multiple organ failure,Chronic Diarrhea,4
+Taylor,Smith,"1685 Spring St, Atlanta GA, 30304",25,M,Dizziness and nausea,Diabetes,2
+Casey,Miller,"9792 Juniper St, Atlanta GA, 30318",71,F,Dizziness and nausea,Diabetes,2
+Cameron,Davis,"9567 Peachtree St, Atlanta GA, 30340",79,F,Mild fever,None,1
+Quinn,Rodriguez,"4959 Spring St, Atlanta GA, 30345",70,F,Mild fever,None,1
+Alex,Rodriguez,"8106 Peachtree St, Atlanta GA, 30324",32,M,Minor headache,None,1
+Alex,Garcia,"5992 Piedmont St, Atlanta GA, 30339",28,M,Persistent cough and fever,Skin Cancer,2
+Jordan,Smith,"7315 Juniper St, Atlanta GA, 30323",89,F,Persistent cough and fever,Skin Cancer,2
+Jamie,Williams,"5156 Juniper St, Atlanta GA, 30337",61,F,Difficulty breathing and extreme fatigue,Chronic Diarrhea,3
+Quinn,Davis,"7010 Piedmont St, Atlanta GA, 30339",18,M,Severe chest pain and high fever,Chronic Diarrhea,3
+Quinn,Williams,"963 Juniper St, Atlanta GA, 30349",32,F,Unresponsive with multiple organ failure,Chronic Diarrhea,4
+Casey,Davis,"3257 Spring St, Atlanta GA, 30302",40,M,Persistent cough and fever,Diabetes,2
+Jamie,Brown,"5550 Spring St, Atlanta GA, 30358",74,M,Severe chest pain and high fever,Chronic Diarrhea,3
+Alex,Rodriguez,"1406 Piedmont St, Atlanta GA, 30357",79,M,Unresponsive with multiple organ failure,High Blood Pressure,4
+Jamie,Garcia,"5630 Peachtree St, Atlanta GA, 30337",20,M,Minor headache,None,1
+Jamie,Garcia,"3404 Spring St, Atlanta GA, 30349",61,F,Persistent cough and fever,Diabetes,2
+Riley,Johnson,"7654 Peachtree St, Atlanta GA, 30337",69,F,Mild fever,None,1
+Jordan,Johnson,"954 Peachtree St, Atlanta GA, 30332",76,M,Mild fever,None,1
+Jordan,Jones,"1807 Piedmont St, Atlanta GA, 30332",36,F,Chest pain with mild fever,Skin Cancer,2
+Alex,Miller,"2427 Peachtree St, Atlanta GA, 30352",73,M,Dizziness and nausea,Diabetes,2
+Alex,Rodriguez,"9439 Juniper St, Atlanta GA, 30306",28,M,Unresponsive with multiple organ failure,Skin Cancer,4
+Casey,Williams,"9661 Juniper St, Atlanta GA, 30319",37,F,Severe trauma with no vital signs,Chronic Diarrhea,4
+Riley,Johnson,"4836 Juniper St, Atlanta GA, 30328",50,F,Mild fever,None,1
+Quinn,Williams,"362 Spring St, Atlanta GA, 30316",67,M,Persistent cough and fever,High Blood Pressure,2
+Morgan,Jones,"7258 Peachtree St, Atlanta GA, 30341",19,M,Multiple rashes and severe itching,Hemophilia,3
+Cameron,Miller,"9988 Spring St, Atlanta GA, 30352",20,F,Severe chest pain and high fever,Hemophilia,3
+Cameron,Brown,"8545 Juniper St, Atlanta GA, 30348",53,F,Persistent cough and fever,Skin Cancer,2
+Jordan,Johnson,"2969 Juniper St, Atlanta GA, 30316",42,M,Mild fever,None,1
+Alex,Jones,"5011 Spring St, Atlanta GA, 30356",50,F,Severe trauma with no vital signs,Skin Cancer,4
+Alex,Williams,"3546 Piedmont St, Atlanta GA, 30346",34,F,Dizziness and nausea,Diabetes,2
+Cameron,Johnson,"4993 Peachtree St, Atlanta GA, 30328",68,F,Severe chest pain and high fever,Chronic Diarrhea,3
+Taylor,Brown,"4742 Spring St, Atlanta GA, 30349",78,F,Unresponsive with multiple organ failure,Chronic Diarrhea,4
+Morgan,Miller,"1160 Spring St, Atlanta GA, 30329",47,M,Slight cough,None,1
+Taylor,Smith,"9431 Juniper St, Atlanta GA, 30321",70,M,Unresponsive with multiple organ failure,High Blood Pressure,4
+Jordan,Rodriguez,"5954 Piedmont St, Atlanta GA, 30358",84,F,Difficulty breathing and extreme fatigue,Hemophilia,3
+Jamie,Davis,"3109 Juniper St, Atlanta GA, 30327",49,M,Dizziness and nausea,Diabetes,2
+Alex,Rodriguez,"7443 Juniper St, Atlanta GA, 30329",34,F,Chest pain with mild fever,Diabetes,2
+Cameron,Wilson,"3050 Peachtree St, Atlanta GA, 30336",67,M,Mild fever,None,1
+Taylor,Davis,"9458 Spring St, Atlanta GA, 30334",25,F,Chest pain with mild fever,Skin Cancer,2
+Quinn,Miller,"6557 Piedmont St, Atlanta GA, 30322",68,M,Slight cough,None,1
+Jamie,Jones,"3224 Spring St, Atlanta GA, 30344",87,M,Unresponsive with multiple organ failure,Chronic Diarrhea,4
+Casey,Williams,"7066 Spring St, Atlanta GA, 30352",23,M,Unresponsive with multiple organ failure,Diabetes,4
+Alex,Garcia,"930 Juniper St, Atlanta GA, 30328",47,M,Chest pain with mild fever,Diabetes,2
+Reese,Jones,"1764 Piedmont St, Atlanta GA, 30358",79,M,Minor headache,None,1
+Jamie,Rodriguez,"7504 Peachtree St, Atlanta GA, 30301",51,F,Unresponsive with multiple organ failure,Hemophilia,4
+Riley,Williams,"3247 Piedmont St, Atlanta GA, 30316",39,M,Severe chest pain and high fever,Hemophilia,3
+Morgan,Smith,"2241 Piedmont St, Atlanta GA, 30352",74,M,Slight cough,None,1
+Riley,Brown,"7521 Piedmont St, Atlanta GA, 30337",65,M,Difficulty breathing and extreme fatigue,Hemophilia,3
+Jordan,Brown,"7490 Piedmont St, Atlanta GA, 30358",86,F,Difficulty breathing and extreme fatigue,Hemophilia,3
+Morgan,Brown,"2939 Spring St, Atlanta GA, 30355",18,F,Persistent cough and fever,Skin Cancer,2
+Jordan,Williams,"2527 Peachtree St, Atlanta GA, 30333",41,F,Minor headache,None,1
+Taylor,Smith,"5636 Spring St, Atlanta GA, 30310",60,M,Severe chest pain and high fever,Chronic Diarrhea,3
+Jordan,Williams,"9045 Juniper St, Atlanta GA, 30323",29,M,Slight cough,None,1
+Quinn,Wilson,"9917 Piedmont St, Atlanta GA, 30334",25,M,Severe chest pain and high fever,Chronic Diarrhea,3
+Morgan,Johnson,"9808 Juniper St, Atlanta GA, 30329",85,F,Severe trauma with no vital signs,High Blood Pressure,4
+Reese,Brown,"6088 Peachtree St, Atlanta GA, 30324",38,M,Unresponsive with multiple organ failure,High Blood Pressure,4
+Alex,Davis,"2243 Spring St, Atlanta GA, 30323",53,F,Persistent cough and fever,High Blood Pressure,2
+Riley,Rodriguez,"3014 Peachtree St, Atlanta GA, 30330",72,M,Mild fever,None,1
+Reese,Miller,"4592 Juniper St, Atlanta GA, 30319",79,F,Mild fever,None,1
+Reese,Davis,"817 Juniper St, Atlanta GA, 30352",36,F,Difficulty breathing and extreme fatigue,Chronic Diarrhea,3
+Morgan,Williams,"4591 Peachtree St, Atlanta GA, 30352",33,M,Severe chest pain and high fever,Hemophilia,3
+Reese,Davis,"2256 Peachtree St, Atlanta GA, 30342",70,M,Chest pain with mild fever,Diabetes,2
+Riley,Johnson,"4946 Spring St, Atlanta GA, 30309",22,M,Dizziness and nausea,High Blood Pressure,2
+Cameron,Wilson,"7038 Piedmont St, Atlanta GA, 30302",24,F,Mild fever,None,1
+Taylor,Garcia,"9680 Peachtree St, Atlanta GA, 30322",54,F,Unresponsive with multiple organ failure,High Blood Pressure,4
+Casey,Miller,"7519 Juniper St, Atlanta GA, 30319",62,F,Slight cough,None,1
+Quinn,Wilson,"4368 Peachtree St, Atlanta GA, 30350",56,M,Severe trauma with no vital signs,Diabetes,4
+Cameron,Rodriguez,"3172 Juniper St, Atlanta GA, 30313",37,F,Severe trauma with no vital signs,High Blood Pressure,4
+Alex,Rodriguez,"923 Peachtree St, Atlanta GA, 30338",80,F,Slight cough,None,1
+Morgan,Miller,"5448 Spring St, Atlanta GA, 30335",75,F,Severe chest pain and high fever,Hemophilia,3
+Alex,Smith,"9688 Piedmont St, Atlanta GA, 30354",64,M,Multiple rashes and severe itching,Chronic Diarrhea,3
+Cameron,Miller,"7675 Spring St, Atlanta GA, 30353",29,F,Severe trauma with no vital signs,Chronic Diarrhea,4
+Cameron,Wilson,"7583 Piedmont St, Atlanta GA, 30328",53,F,Unresponsive with multiple organ failure,High Blood Pressure,4
+Jamie,Smith,"5420 Peachtree St, Atlanta GA, 30353",81,M,Unresponsive with multiple organ failure,Chronic Diarrhea,4
+Taylor,Miller,"5813 Juniper St, Atlanta GA, 30305",46,M,Severe chest pain and high fever,Hemophilia,3
+Jordan,Jones,"1115 Peachtree St, Atlanta GA, 30354",27,F,Slight cough,None,1
+Morgan,Wilson,"4258 Peachtree St, Atlanta GA, 30322",66,M,Multiple rashes and severe itching,Chronic Diarrhea,3
+Reese,Williams,"8802 Peachtree St, Atlanta GA, 30321",50,F,Unresponsive with multiple organ failure,Schizophrenic,4
+Morgan,Miller,"1560 Juniper St, Atlanta GA, 30337",86,M,Mild fever,None,1
+Reese,Smith,"4880 Peachtree St, Atlanta GA, 30304",34,M,Persistent cough and fever,High Blood Pressure,2
+Cameron,Davis,"349 Piedmont St, Atlanta GA, 30354",49,F,Chest pain with mild fever,Skin Cancer,2
+Alex,Miller,"8527 Peachtree St, Atlanta GA, 30330",67,F,Chest pain with mild fever,High Blood Pressure,2
+Riley,Jones,"7096 Piedmont St, Atlanta GA, 30302",34,F,Multiple rashes and severe itching,Chronic Diarrhea,3
+Jordan,Miller,"9621 Piedmont St, Atlanta GA, 30318",55,F,Chest pain with mild fever,Skin Cancer,2
+Jordan,Brown,"4361 Peachtree St, Atlanta GA, 30324",68,M,Difficulty breathing and extreme fatigue,Chronic Diarrhea,3
