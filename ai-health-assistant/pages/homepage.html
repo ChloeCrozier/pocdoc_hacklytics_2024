@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <title>Bakery Delights</title>
+</head>
+<body>
+    <nav class="container-fluid">
+        <ul>
+            <li><strong>Bakery Delights</strong></li>
+        </ul>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#" role="button">Contact</a></li>
+        </ul>
+    </nav>
+    <main class="container">
+        <div class="grid">
+            <section>
+                <hgroup>
+                    <h2>Welcome to Bakery Delights</h2>
+                    <h3>Experience the taste of joy</h3>
+                </hgroup>
+                <p>Discover our handcrafted pastries and bread, made with love and the finest ingredients.</p>
+                <figure>
+                    <img src="https://unsplash.com/photos/vgO2OWB2fK4" alt="Featured Bakery Item" />
+                    <figcaption><a href="https://unsplash.com/photos/vgO2OWB2fK4" target="_blank">Our Signature Pastry</a></figcaption>
+                </figure>
+                <h3>Our Story</h3>
+                <p>Founded in 2010, Bakery Delights has been serving the community with passion and the freshest of ingredients.</p>
+                <h3>What Customers Say</h3>
+                <p>"The best croissants outside of Paris!" - Jane Doe</p>
+            </section>
+        </div>
+    </main>
+    <section aria-label="Subscribe example">
+        <div class="container">
+            <article>
+                <hgroup>
+                    <h2>Stay Updated</h2>
+                    <h3>Subscribe for the latest news and special offers</h3>
+                </hgroup>
+                <form class="grid">
+                    <input type="text" id="firstname" name="firstname" placeholder="First Name" aria-label="First Name" required />
+                    <input type="email" id="email" name="email" placeholder="Email" aria-label="Email" required />
+                    <button type="submit" onclick="event.preventDefault()">Subscribe</button>
+                </form>
+            </article>
+        </div>
+    </section>
+    <footer class="container">
+        <small>
+            <a href="#">Privacy Policy</a> • <a href="#">Terms of Use</a>
+        </small>
+    </footer>
+</body>
+</html>
