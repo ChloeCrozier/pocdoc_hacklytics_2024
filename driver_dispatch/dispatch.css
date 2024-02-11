@@ -70,12 +70,12 @@ body, html {
   width: 100%;
   padding: 10px;
   margin-top: 10px;
-  background-color: #697ca5;;
+  background-color: rgb(132, 45, 55);
   color: #fff;
   border: none;
   cursor: pointer;
 }
 
 #date-filter button:hover {
-  background-color: #697ca5;
+  background-color:  rgb(132, 45, 55);
 }

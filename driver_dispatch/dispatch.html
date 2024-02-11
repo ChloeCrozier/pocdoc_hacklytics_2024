@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MapBox Web App</title>
+  <title>PocDoc</title>
   <!-- Include Mapbox GL JS CSS -->
   <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" rel="stylesheet">
   <!-- Include your custom CSS file -->
@@ -16,16 +16,13 @@
       <div id="date-filter">
         <label for="start-time">Start Time:</label>
         <input type="datetime-local" id="start-time" name="start-time">
-        <!-- Remove the End Time section -->
-        <!-- <label for="end-time">End Time:</label>
-        <input type="datetime-local" id="end-time" name="end-time"> -->
         <!-- Add Hospital Selection Dropdown -->
         <label for="hospital-dropdown">Select Hospital(s):</label>
         <select id="hospital-dropdown" name="hospital-dropdown" multiple>
           <!-- Hospital options will be added dynamically -->
         </select>
-        <!-- Move the button here -->
-        <button onclick="updateMapData()">Apply Filters</button>
+        <!-- Apply Filters Button -->
+        <button onclick="applyFilters()">Apply Filters</button>
       </div>
     </div>
     <div id="map" class="map"></div>
