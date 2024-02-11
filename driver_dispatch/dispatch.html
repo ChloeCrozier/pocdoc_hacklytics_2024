@@ -4,33 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PocDoc</title>
-  <!-- Include Mapbox GL JS CSS -->
+  <link rel="icon" type="image/png" href="favicon.png">
   <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" rel="stylesheet">
-  <!-- Include your custom CSS file -->
   <link rel="stylesheet" href="dispatch.css">
 </head>
 <body>
   <div class="container">
     <div id="dashboard" class="dashboard">
-      <!-- Add your filtering dashboard content here -->
+      <img id="logo" src="logo.png" alt="Logo">
       <div id="date-filter">
         <label for="start-time">Start Time:</label>
         <input type="datetime-local" id="start-time" name="start-time">
-        <!-- Add Hospital Selection Dropdown -->
         <label for="hospital-dropdown">Select Hospital(s):</label>
         <select id="hospital-dropdown" name="hospital-dropdown" multiple>
-          <!-- Hospital options will be added dynamically -->
         </select>
-        <!-- Apply Filters Button -->
+        <label for="unit-dropdown">Select Unit(s):</label>
+        <select id="unit-dropdown" name="unit-dropdown" multiple>
+        </select>
+        <label for="time-constraint-checkbox">Apply Time Constraint:</label>
+        <input type="checkbox" id="time-constraint-checkbox" onchange="applyFilters()">
         <button onclick="applyFilters()">Apply Filters</button>
       </div>
     </div>
     <div id="map" class="map"></div>
   </div>
 
-  <!-- Include Mapbox GL JS -->
   <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script>
-  <!-- Include your JavaScript file -->
   <script src="dispatch_script.js"></script>
 </body>
 </html>
