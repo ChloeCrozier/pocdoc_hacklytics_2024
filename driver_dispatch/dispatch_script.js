@@ -38,7 +38,7 @@ function addHospitalToMap(hospital) {
 
   // Create a new hospital marker
   new mapboxgl.Marker({
-    color: 'midnightblue', // Dark blue color
+    color: '#009E60', // Dark blue color
     scale: 1.8 // Larger size than the default
   })
     .setLngLat([longitude, latitude])
@@ -59,11 +59,18 @@ fetch('patients_by_hospital.json')
       hospitalsDropdown.add(option);
     });
 
+    // Calculate the cutoff time (5 hours ago from the current time)
+    const currentTime = new Date();
+    currentTime.setHours(currentTime.getHours() - 5);
+
     // Add hospital markers and patient markers to the map
     Object.values(data.hospitals).forEach(hospital => {
       addHospitalToMap(hospital);
       hospital.patients.forEach(patient => {
-        addPatientToMap(patient);
+        const patientTime = new Date(patient.timestamp);
+        if (patientTime >= currentTime) {
+          addPatientToMap(patient);
+        }
       });
     });
   })
@@ -71,19 +78,28 @@ fetch('patients_by_hospital.json')
     console.error('Error fetching JSON:', error);
   });
 
-// Function to update map data based on selected hospitals
+// Function to update map data based on selected hospitals and time
 function updateMapData() {
   const selectedHospitals = Array.from(document.getElementById('hospital-dropdown').selectedOptions).map(option => option.value);
   console.log('Selected Hospitals:', selectedHospitals);
 
-  // Hide all markers
+  // If no hospitals are selected, do not remove existing markers
+  if (selectedHospitals.length === 0) {
+    return;
+  }
+
+  // Remove existing markers
   map.eachLayer(layer => {
     if (layer instanceof mapboxgl.Marker) {
       layer.remove();
     }
   });
 
-  // Add hospital markers and patient markers for selected hospitals
+  // Calculate the cutoff time (5 hours ago from the current time)
+  const currentTime = new Date();
+  currentTime.setHours(currentTime.getHours() - 5);
+
+  // Add hospital markers and patient markers for selected hospitals and within the last 5 hours
   fetch('patients_by_hospital.json')
     .then(response => response.json())
     .then(data => {
@@ -91,7 +107,10 @@ function updateMapData() {
         if (selectedHospitals.includes(hospital.facility_name)) {
           addHospitalToMap(hospital);
           hospital.patients.forEach(patient => {
-            addPatientToMap(patient);
+            const patientTime = new Date(patient.timestamp);
+            if (patientTime >= currentTime) {
+              addPatientToMap(patient);
+            }
           });
         }
       });

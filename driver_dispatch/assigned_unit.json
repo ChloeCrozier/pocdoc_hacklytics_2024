@@ -3,6 +3,12 @@
         "num_vans": 8.0,
         "facility_name": "EMORY UNIVERSITY HOSPITAL MIDTOWN",
         "longitude": -84.38614,
+        "van_ratio": {
+            "Specialized": 0,
+            "General": 0
+        },
+        "address": "550 PEACHTREE STREET, NE, ATLANTA, GA 30308",
+        "latitude": 33.76851,
         "patients": [
             {
                 "first_name": "John",
