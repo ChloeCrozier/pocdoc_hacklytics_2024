@@ -15,8 +15,13 @@ for hospital in data['hospitals'].values():
 # Convert to numpy array
 patient_locations = np.array(patient_locations)
 
-# Initialize and fit KMeans model with random initialization
-kmeans = KMeans(n_clusters=25, init='random', n_init=10)  # Specify the number of clusters and number of initializations
+# First round of k-means clustering to get initial centroids
+kmeans_initial = KMeans(n_clusters=25, init='k-means++', n_init=10)
+kmeans_initial.fit(patient_locations)
+initial_centroids = kmeans_initial.cluster_centers_
+
+# Second round of k-means clustering with initial centroids
+kmeans = KMeans(n_clusters=25, init=initial_centroids, n_init=1)  
 kmeans.fit(patient_locations)
 
 # Get cluster centroids and labels
