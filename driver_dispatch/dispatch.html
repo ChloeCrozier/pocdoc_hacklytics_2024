@@ -19,7 +19,12 @@
         <!-- Remove the End Time section -->
         <!-- <label for="end-time">End Time:</label>
         <input type="datetime-local" id="end-time" name="end-time"> -->
+        <!-- Add Hospital Selection Dropdown -->
+        <label for="hospital-dropdown">Select Hospital(s):</label>
+        <select id="hospital-dropdown" name="hospital-dropdown" multiple>
         <button onclick="updateMapData()">Apply Filters</button>
+          <!-- Hospital options will be added dynamically -->
+        </select>
       </div>
     </div>
     <div id="map" class="map"></div>
