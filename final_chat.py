@@ -2,9 +2,20 @@ import asyncio
 from openai import OpenAI
 import requests
 from datetime import datetime
-client = OpenAI(api_key="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")
+import os
+from dotenv import load_dotenv
 
-llm = OpenAI(api_key="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")
+import logging
+
+
+load_dotenv()
+
+openai_key = os.getenv("OPEN_AI_KEY")
+
+
+client = OpenAI(api_key=openai_key)
+
+llm = OpenAI(api_key=openai_key)
 
 async def create_medical_assistant():
     assistant =client.beta.assistants.create(
@@ -85,7 +96,7 @@ async def interact_with_user(assistant_id):
             chat_history_messages = client.beta.threads.messages.list(thread_id)
             chat_history = "\n".join([f"{msg.role.capitalize()}: {msg.content}" for msg in chat_history_messages])
 
-            severity = classify_severity_with_gpt4(chat_history)
+            severity = await classify_severity_with_gpt4(chat_history)
             print(f"Severity: {severity}, Geocoded Address: {geocoded_address}, Time: {datetime.now().isoformat()}")
             
             return {"severity": severity, "address": address, "geocoded_address": geocoded_address, "time": datetime.now().isoformat()}
@@ -114,11 +125,11 @@ async def parse_address(description):
     return address
 
 async def geocode_address(address):
-    api_key = "be3896ce2fb6414f8820ebc45cc753ea"
+    
     base_url = "https://api.geoapify.com/v1/geocode/search"
     params = {
         "text": address,
-        "apiKey": api_key
+        "apiKey": os.getenv("GEOCODE_API_KEY")
     }
 
     response = requests.get(base_url, params=params)
@@ -135,31 +146,53 @@ async def geocode_address(address):
         return f"Error: {response.status_code}"
     
 
-def classify_severity_with_gpt4(chat_history):
-    conversation_context = f"""
-    {chat_history}
+# async def classify_severity_with_gpt4(chat_history):
+#     conversation_context = f"""
+#     {chat_history}
    
-    """
-    question = """Given the patient's condition described above, classify the issues into one of the following stages below. 
-         Please provide the stage number directly:
-    - Stage 1: No complications or problems of minimal severity.
-    - Stage 2: Problems limited to a single organ or system; significantly increased risk of complications.
-    - Stage 3: Multiple site involvement; generalized systemic involvement; poor prognosis.
-    - Stage 4: Death."""
+#     """
+#     question = """Given the patient's condition described above, classify the issues into one of the following stages below. 
+#          Please provide the stage number directly:
+#     - Stage 1: No complications or problems of minimal severity.
+#     - Stage 2: Problems limited to a single organ or system; significantly increased risk of complications.
+#     - Stage 3: Multiple site involvement; generalized systemic involvement; poor prognosis.
+#     - Stage 4: Death."""
 
-    client = OpenAI(api_key="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")
+    
 
-    completion = client.chat.completions.create(
-    model="gpt-3.5-turbo",
-    messages=[
-        {"role": "system", "content": "You are a medical assistant."},
-        {"role": "user", "content": conversation_context},
-        {"role": "system", "content": question}
-    ]
-    )
+#     completion = client.chat.completions.create(
+#     model="gpt-3.5-turbo",
+#     messages=[
+#         {"role": "system", "content": "You are a medical assistant."},
+#         {"role": "user", "content": conversation_context},
+#         {"role": "system", "content": question}
+#     ]
+#     )
+#     print(completion.choices[0].message.content)
 
-    return completion.choices[0].message.content
-    # return response.choices[0].text.strip()
+#     return completion.choices[0].message.content
+#     # return response.choices[0].text.strip()
+    
+async def classify_severity_with_gpt4(chat_history):
+    conversation_context = f"{chat_history}"
+    question = '''Given the patient's condition described above, classify the issues into one of the following stages. Please provide the stage number directly: 1, 2, 3, or 4'''
+
+    try:
+        logging.info("Sending prompt to OpenAI API")
+        completion = client.chat.completions.create(
+            model="gpt-3.5-turbo",
+            messages=[
+                {"role": "system", "content": "You are a medical assistant."},
+                {"role": "user", "content": conversation_context},
+                {"role": "user", "content": question}
+            ]
+        )
+        severity_response = completion.choices[0].message.content
+        logging.info(f"Received response: {severity_response}")
+        return severity_response
+    except Exception as e:
+        logging.error(f"Error calling OpenAI API: {e}")
+        return "Error processing your request. Please try again."
 
 async def main():
     assistant = await create_medical_assistant()

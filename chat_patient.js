@@ -1,15 +1,23 @@
-// chat.js
-document.getElementById('sendButton').addEventListener('click', () => {
+document.getElementById('sendButton').addEventListener('click', async () => {
     const userInput = document.getElementById('userInput').value;
     if (userInput.trim() !== '') {
         displayMessage(userInput, 'user');
-        // Simulate a chatbot response
-        setTimeout(() => {
-            displayMessage(`Analyzing: "${userInput}"...`, 'bot');
-            // Here you would typically send the userInput to your backend for processing
-        }, 1000);
+        
+        // Send userInput to the Flask backend
+        const response = await fetch('/analyze', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ userInput })
+        });
+        const data = await response.json();
+        
+        // Display bot response
+        displayMessage(data.message, 'bot'); // Adjust according to the response structure
     }
 });
+
 
 function displayMessage(message, sender) {
     const chatbox = document.getElementById('chatbox');
