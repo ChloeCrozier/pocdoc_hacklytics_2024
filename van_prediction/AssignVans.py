@@ -1,36 +1,48 @@
 import json
+from pulp import LpProblem, LpVariable, lpSum, LpMaximize
 
-# Load the JSON data from file
-with open('patients_by_hospital.json', 'r') as file:
-    data = json.load(file)
+# Read data from JSON file
+with open('test.json') as f:
+    data = json.load(f)
 
-# Initialize a list to store hospital scores
-hospital_scores = []
+hospitals_data = data.get('hospitals', {})
 
-# Define weights for each factor
-weights = {
-    "median_wait_time": 0.3,
-    "county_population_density": 0.2,
-    "avg_healthcare_case_severity": 0.3,
-    "num_patients_near_hospital": 0.2
-}
+# Extract relevant data from JSON
+hospitals = list(hospitals_data.keys())
+patients = [len(hospitals_data[hospital].get('patients', [])) for hospital in hospitals]
+escalation_rate = [sum(patient.get('escalation', 0) for patient in hospitals_data[hospital].get('patients', [])) / max(len(hospitals_data[hospital].get('patients', [])), 1) for hospital in hospitals]
 
-# Iterate over each hospital in the data
-for address, hospital_info in data["hospitals"].items():
-    hospital_data = hospital_info.get("patients", [])
-    if hospital_data:
-        # Initialize variables for scoring
-        score = 0
+# Other parameters
+num_hospitals = len(hospitals)
+total_vans_available = 25
+minimum_vans_per_hospital = 2  # Example minimum vans per hospital, replace with actual data
+weights_patients = 1  # Weight for number of patients
+weights_escalation = 2  # Weight for average escalation rate
 
-        # Iterate over each hospital data
-        for patient in hospital_data:
-            # Calculate weighted score for each factor
-            for factor, weight in weights.items():
-                score += patient.get(factor, 0) * weight
+# Define the linear optimization problem
+prob = LpProblem("HospitalVansAllocation", LpMaximize)
 
-        # Update num_vans field directly in the JSON
-        hospital_info["num_vans"] = score
+# Define decision variables
+x = [LpVariable(f"x{i}", lowBound=0, cat="Integer") for i in range(1, num_hospitals + 1)]
 
-# Save the updated JSON back to the file
-with open('patients_by_hospital.json', 'w') as file:
-    json.dump(data, file, indent=4)
+# Define objective function
+prob += lpSum((patients[i] * weights_patients + escalation_rate[i] * weights_escalation) * x[i] for i in range(num_hospitals))
+
+# Define constraints
+prob += lpSum(x) <= total_vans_available, "TotalVansConstraint"
+for i in range(num_hospitals):
+    if patients[i] == 0:
+        prob += x[i] == 0  # Set 1 van for hospitals with no patients
+    else:
+        prob += x[i] >= minimum_vans_per_hospital, f"MinVansHospital{i+1}"
+
+# Solve the problem
+prob.solve()
+
+# Output the results
+print("Status:", prob.status)
+print("Optimal allocation of vans to hospitals:")
+for i in range(num_hospitals):
+    print(f"{hospitals[i]}: {x[i].varValue} vans")
+
+print("Total number of vans allocated:", sum(x[i].varValue for i in range(num_hospitals)))
