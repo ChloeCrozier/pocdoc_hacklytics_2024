@@ -10,7 +10,20 @@
   <link rel="stylesheet" href="dispatch.css">
 </head>
 <body>
-  <div id="map"></div>
+  <div class="container">
+    <div id="dashboard" class="dashboard">
+      <!-- Add your filtering dashboard content here -->
+      <div id="date-filter">
+        <label for="start-time">Start Time:</label>
+        <input type="datetime-local" id="start-time" name="start-time">
+        <!-- Remove the End Time section -->
+        <!-- <label for="end-time">End Time:</label>
+        <input type="datetime-local" id="end-time" name="end-time"> -->
+        <button onclick="updateMapData()">Apply Filters</button>
+      </div>
+    </div>
+    <div id="map" class="map"></div>
+  </div>
 
   <!-- Include Mapbox GL JS -->
   <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script>

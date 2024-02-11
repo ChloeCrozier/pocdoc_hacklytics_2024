@@ -1,41 +1,210 @@
 body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
-  
-  #map {
-    height: 100%;
-    width: 100%;
-  }
-  
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
 
-  /* Styles for the legend */
+.container {
+  display: flex;
+  height: 100%;
+}
+
+.dashboard {
+  width: 30%;
+  padding: 20px;
+  box-sizing: border-box;
+}body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+}
+
+.dashboard {
+  width: 30%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.map {
+  width: 70%;
+  height: 100%;
+}
+
+/* Styles for the legend */
 .mapboxgl-ctrl {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .mapboxgl-ctrl h3 {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-  
-  .mapboxgl-ctrl div {
-    margin-bottom: 5px;
-  }
-  
-  /* Styles for the legend dot */
-  .legend-dot {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    margin-right: 5px;
-  }
-  
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.mapboxgl-ctrl h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.mapboxgl-ctrl div {
+  margin-bottom: 5px;
+}
+
+/* Styles for the legend dot */
+.legend-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+/* Styles for the date filter */
+#date-filter {
+  width: 20%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#date-filter label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#date-filter input[type="datetime-local"] {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#date-filter button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#date-filter button:hover {
+  background-color: #0056b3;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+}
+
+.dashboard {
+  width: 30%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.map {
+  width: 70%;
+  height: 100%;
+}
+
+/* Styles for the legend */
+.mapboxgl-ctrl {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.mapboxgl-ctrl h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.mapboxgl-ctrl div {
+  margin-bottom: 5px;
+}
+
+/* Styles for the legend dot */
+.legend-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+/* Styles for the date filter */
+#date-filter {
+  width: 90%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#date-filter label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#date-filter input[type="datetime-local"] {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#date-filter button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#date-filter button:hover {
+  background-color: #0056b3;
+}
+
+
+.map {
+  width: 70%;
+  height: 100%;
+}
+
+/* Styles for the legend */
+.mapboxgl-ctrl {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.mapboxgl-ctrl h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.mapboxgl-ctrl div {
+  margin-bottom: 5px;
+}
+
+/* Styles for the legend dot */
+.legend-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
