@@ -1,3 +1,7 @@
 # PocDoc - Healthcare on Demand
 
-This is our team's submission for Hacklytics '24, GT's Data Science Hackathon. We created an app called PocDoc that triages mobile health units to patients based on severity level. We allow a patient to interact with a language model trained on medical data from Hugging Face to predict the severity of their condition. We then use k-means clustering, linear regression modeling (based on current local hospital burden, patient's severity level, and pre-existing conditions), and the patient's geographical location to dispatch mobile health units to a given area. The goal is to provide a solution to overburdened healthcare facilities in metro areas and improve access to healthcare in rural areas. We used the OpenAI API for patient interaction and the Mapbox API to display an interactive map of patients and their assigned mobile unit.
+This is our team's submission for Hacklytics '24, GT's Data Science Hackathon. We created an app called PocDoc that triages mobile health units to patients based on severity level. We allow a patient to interact with a language model trained on medical data from Hugging Face to predict the severity of their condition. 
+
+We then use k-means clustering, linear regression modeling (based on current local hospital burden, patient's severity level, and pre-existing conditions), and the patient's geographical location to dispatch mobile health units to a given area. The goal is to provide a solution to overburdened healthcare facilities in metro areas and improve access to healthcare in rural areas. 
+
+We used the OpenAI API for patient interaction and the Mapbox API to display an interactive map of patients and their assigned mobile unit.
