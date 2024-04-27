@@ -1,4 +1,4 @@
-**PocDoc - Healthcare on Demand**
+# PocDoc - Healthcare on Demand
 
 This is our team's submission for Hacklytics '24, GT's Data Science Hackathon. We created a PocDoc app that triages mobile health units to patients based on severity level.
 We allow patients to interact with a language model trained on medical data from Hugging Face to predict the severity of their condition. 
