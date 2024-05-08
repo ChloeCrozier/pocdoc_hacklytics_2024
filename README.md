@@ -9,3 +9,6 @@ This is our team's submission for Hacklytics '24, GT's Data Science Hackathon. W
 
 <img width="1440" alt="demo_2" src="https://github.com/ChloeCrozier/pocdoc_hacklytics_2024/assets/40836363/b5da720a-7346-421b-9552-0684430a909f">
 <img width="1440" alt="demo_1" src="https://github.com/ChloeCrozier/pocdoc_hacklytics_2024/assets/40836363/34188615-d6e6-434f-8174-4e6b464301ed">
+<img width="1440" alt="demo_3" src="https://github.com/ChloeCrozier/pocdoc_hacklytics_2024/assets/40836363/3d8295b3-989c-4282-94b7-1e0a92d73bc1">
+<img width="1440" alt="demo_4" src="https://github.com/ChloeCrozier/pocdoc_hacklytics_2024/assets/40836363/4983568a-050f-46e6-b951-b41c337db0c8">
+<img width="1440" alt="demo_5" src="https://github.com/ChloeCrozier/pocdoc_hacklytics_2024/assets/40836363/d5c3efcc-892f-489f-8cef-2118d5786539">
