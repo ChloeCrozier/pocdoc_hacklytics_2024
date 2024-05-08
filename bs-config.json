@@ -1,7 +1,0 @@
-{
-    "server": {
-      "baseDir": "./",
-      "index": "index_patient.html"
-    }
-  }
-  
