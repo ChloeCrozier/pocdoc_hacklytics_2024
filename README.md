@@ -1,13 +1,14 @@
 # PocDoc - Healthcare on Demand
 
-### Devfolio Link:
-- https://devfolio.co/projects/pocdoc-d87f
-  
 ### Team
 - Chloe Crozier | [cscrozi@clemson.edu](mailto:cscrozi@clemson.edu)
 - Justin Silva  | [jggueva@clemson.edu](mailto:jggueva@clemson.edu)
 - James Tribble | [jjtribb@clemson.edu](mailto:jjtribb@clemson.edu)
 - Nayha Hussain | [nayhah@clemson.edu](mailto:nayhah@clemson.edu)
+  
+### Devfolio Link:
+- https://devfolio.co/projects/pocdoc-d87f
+  
 ---
 
 ### Overview
